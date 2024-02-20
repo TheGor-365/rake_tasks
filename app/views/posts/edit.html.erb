@@ -1,10 +1,9 @@
-<h1>Editing post</h1>
+<h1 class="mb-5">Editing post</h1>
 
 <%= render "form", post: @post %>
 
 <br>
-
-<div>
-  <%= link_to "Show this post", @post %> |
-  <%= link_to "Back to posts", posts_path %>
+<div class="btn-group my-5">
+  <%= link_to "Show", @post, class: "btn btn-sm btn-outline-dark" %>
+  <%= link_to "Back", posts_path, class: "btn btn-sm btn-outline-dark" %>
 </div>

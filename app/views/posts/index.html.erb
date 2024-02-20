@@ -1,14 +1,8 @@
-<p style="color: green"><%= notice %></p>
+<h1 class="mb-5">Posts</h1>
 
-<h1>Posts</h1>
+<% @posts.each do |post| %>
+  <%= render post %>
+  <p><%= link_to "Show", post, class: "btn btn-sm btn-outline-dark" %></p>
+<% end %>
 
-<div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
-</div>
-
-<%= link_to "New post", new_post_path %>
+<%= link_to "New post", new_post_path, class: "btn btn-sm btn-outline-dark" %>
